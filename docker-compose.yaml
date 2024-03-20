@@ -1,0 +1,18 @@
+services:
+  mysql:
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - reddit-net
+    image: mysql
+    env_file:
+      - .env
+    ports:
+      - '3306:3306'
+
+networks:
+  reddit-net:
+    name: reddit-net
+
+volumes:
+  mysql_data:

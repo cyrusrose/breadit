@@ -1,0 +1,16 @@
+{
+    "include": [
+        "tools/**/*.ts",
+        "prisma/**/*.ts",
+        ".eslintrc.js",
+        "jest.config.base.js",
+        "jest.config.js",
+        "jest.preset.js",
+        "tailwind.config.js",
+        "prettier.config.js",
+        "postcss.config.js",
+        "next.config.js",
+        "next-env.d.ts",
+        "codegen.ts"
+    ]
+}
