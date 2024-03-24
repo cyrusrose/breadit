@@ -33,7 +33,6 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
       const { data } = await axios.get(query)
       return data as ExtendedPost[]
     },
-
     {
       getNextPageParam: (_, pages) => {
         return pages.length + 1
@@ -51,7 +50,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
   const posts = data?.pages.flatMap((page) => page) ?? initialPosts
 
   return (
-    <ul className='flex flex-col col-span-2 space-y-6'>
+    <ul className="col-span-2 flex flex-col space-y-6">
       {posts.map((post, index) => {
         const votesAmt = post.votes.reduce((acc, vote) => {
           if (vote.type === 'UP') return acc + 1
@@ -91,8 +90,8 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
       })}
 
       {isFetchingNextPage && (
-        <li className='flex justify-center'>
-          <Loader2 className='w-6 h-6 text-zinc-500 animate-spin' />
+        <li className="flex justify-center">
+          <Loader2 className="h-6 w-6 animate-spin text-zinc-500" />
         </li>
       )}
     </ul>
