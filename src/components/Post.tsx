@@ -61,7 +61,7 @@ const Post: FC<PostProps> = ({
           </a>
 
           <div
-            className="relative max-h-40 w-full overflow-clip text-sm"
+            className="relative max-h-40 w-full text-clip text-sm"
             ref={pRef}>
             <EditorOutput content={post.content} />
             {pRef.current?.clientHeight === 160 ? (
@@ -72,7 +72,7 @@ const Post: FC<PostProps> = ({
         </div>
       </div>
 
-      <div className="z-20 bg-gray-50 px-4 py-4 text-sm sm:px-6">
+      <div className="z-20 bg-gray-50 p-4 text-sm sm:px-6">
         <Link
           href={`/r/${subredditName}/post/${post.id}`}
           className="flex w-fit items-center gap-2">

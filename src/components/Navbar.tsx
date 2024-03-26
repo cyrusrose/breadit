@@ -4,12 +4,12 @@ import Link from 'next/link'
 import { Icons } from './Icons'
 import { buttonVariants } from './ui/Button'
 import { UserAccountNav } from './UserAccountNav'
-// import SearchBar from './SearchBar'
+import SearchBar from './SearchBar'
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions)
   return (
-    <div className="sbg-zinc-100 fixed inset-x-0 top-0 z-[10] h-fit border-b border-zinc-300 py-2">
+    <div className="sbg-zinc-100 fixed inset-x-0 top-0 z-10 h-fit border-b border-zinc-300 py-2">
       <div className="container mx-auto flex h-full max-w-7xl items-center justify-between gap-2">
         {/* logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -20,7 +20,7 @@ const Navbar = async () => {
         </Link>
 
         {/* search bar */}
-        {/* <SearchBar /> */}
+        <SearchBar />
 
         {/* actions */}
         {session?.user ? (

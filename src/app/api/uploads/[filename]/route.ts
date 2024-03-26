@@ -13,6 +13,7 @@ export const GET = async (
   try {
     const filePath = path.join(process.cwd(), 'public/uploads/' + filename)
     const file = await promises.readFile(filePath)
+    // @ts-expect-error
     const { ext, mime } = await fileTypeFromFile(filePath)
     return new Response(file, {
       status: 201,
