@@ -6,6 +6,8 @@
 
 This project is a fullstack application based on the following [tutorial](https://github.com/joschan21/breadit). It replicates core functionality of a popular website [reddit](https://www.reddit.com/).
 
+Use this command to start an app: `pnpm run dev -p 3001`
+
 In this branch you'll find:
 
 - Typescript language.
